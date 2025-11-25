@@ -1,8 +1,8 @@
 variable "resource_groups" {
-  description = "Map of resource groups to create"
+  description = "List of Resource Groups to create"
   type = map(object({
     name     = string
     location = string
-    tags     = map(string)
+    tags     = optional(map(string), {})
   }))
 }

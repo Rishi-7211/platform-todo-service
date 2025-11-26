@@ -17,3 +17,12 @@ variable "storage_accounts" {
     tags                     = optional(map(string), {})
   }))
 }
+variable "storage_containers" {
+  description = "A map of storage containers to create"
+  type = map(object({
+    name               = string
+    storage_account_id = string
+    container_access_type = string
+  }))
+  default = {}
+}

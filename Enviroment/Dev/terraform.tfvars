@@ -17,3 +17,17 @@ resource_groups = {
     }
   }
 }
+storage_accounts = {
+  "sa1" = {
+    name                     = "devappstorageacct"
+    resource_group_name      = "Devapp-RG"
+    location                 = "Central India"
+    account_tier             = "Standard"
+    account_replication_type = "LRS"
+    tags = {
+      environment = "Dev"
+      project     = "TodoApp"
+    }
+    
+  }
+}
